@@ -1,15 +1,13 @@
-import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <h1>Teste Prático</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+      <div className="exercises_list">
+        <button>Exercício 1 - Caixa Eletrônico</button>
+        <button>
+          Exercício 2 - Identificar a(s) letra(s) mais Frequente(s)
         </button>
       </div>
     </>
