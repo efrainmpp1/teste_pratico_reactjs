@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./index.css";
 
 const Exercise1 = () => {
   const [valor, setValor] = useState("");
@@ -33,7 +35,7 @@ const Exercise1 = () => {
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>Caixa Eletrônico</h1>
       <p>Insira o valor desejado para saque:</p>
       <input
@@ -45,7 +47,7 @@ const Exercise1 = () => {
       <button onClick={handleSaque}>Sacar</button>
 
       {resultado && (
-        <div>
+        <div className="resultado">
           <h3>Notas entregues:</h3>
           {typeof resultado === "string" ? (
             <p>{resultado}</p>
@@ -60,6 +62,12 @@ const Exercise1 = () => {
           )}
         </div>
       )}
+
+      <div className="footer">
+        <Link to="/">
+          <button className="voltar-btn">Voltar para a página inicial</button>
+        </Link>
+      </div>
     </div>
   );
 };
